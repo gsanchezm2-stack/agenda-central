@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Agenda Central - iniciar interfaz",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"agenda-central/frontend",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"127.0.0.1"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
