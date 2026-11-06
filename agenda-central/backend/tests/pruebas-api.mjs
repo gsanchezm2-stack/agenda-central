@@ -1,6 +1,6 @@
 // Pruebas automáticas de la API. Requiere el servidor en marcha (npm start) y Node 18+.
 // Uso: npm test        o        npm test > tests/resultados.md
-const BASE = process.env.BASE_URL || 'http://localhost:3000';
+const BASE = process.env.BASE_URL || 'http://localhost:5000';
 const llamar = async (ruta, metodo = 'GET', cuerpo, crudo) => {
   const r = await fetch(BASE + ruta, { method: metodo, headers: { 'Content-Type': 'application/json' }, body: crudo ?? (cuerpo ? JSON.stringify(cuerpo) : undefined) });
   return { status: r.status, json: r.status === 204 ? null : await r.json().catch(() => null) };
